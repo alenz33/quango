@@ -24,7 +24,7 @@
 
 from PyQt4.QtCore import QByteArray, QSettings, pyqtSignature as qtsig
 from PyQt4.QtGui import QMainWindow, QMessageBox, QTreeWidgetItem, QColor, \
-    QBrush, QIcon
+    QBrush, QIcon, QInputDialog
 
 import PyTango
 
@@ -65,6 +65,12 @@ class MainWindow(QMainWindow):
     @qtsig('')
     def on_actionAbout_Qt_triggered(self):
         QMessageBox.aboutQt(self, 'About Qt')
+
+    @qtsig('')
+    def on_actionAdd_Tango_host_triggered(self):
+        host, accepted = QInputDialog.getText(self, 'Add tango host', 'New tango host:')
+        if accepted:
+            self.addTangoHost(str(host))
 
     def on_tree_itemClicked(self, item, _col):
         pass
