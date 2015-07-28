@@ -1,0 +1,8 @@
+<RCC>
+  <qresource>
+    <file>server.png</file>
+    <file>plug.png</file>
+    <file>folder.png</file>
+    <file>folder-open.png</file>
+  </qresource>
+</RCC>
