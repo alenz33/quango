@@ -62,6 +62,10 @@ class MainWindow(QMainWindow):
                                 'Quango, a generic Tango device client\n\n'
                                 '(c) 2015 MLZ instrument control')
 
+    @qtsig('')
+    def on_actionAbout_Qt_triggered(self):
+        QMessageBox.aboutQt(self, 'About Qt')
+
     def on_tree_itemClicked(self, item, _col):
         pass
 
